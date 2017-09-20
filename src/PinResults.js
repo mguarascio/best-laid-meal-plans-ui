@@ -8,15 +8,9 @@ export default class PinResults extends Component {
           rows.push(<Pin pin={pin} key={pin.id}/>);
         });
         return (
-          <table>
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Img</th>
-              </tr>
-            </thead>
-            <tbody>{rows}</tbody>
-          </table>
+          <div>
+            {rows}
+          </div>
         );
     }
 }

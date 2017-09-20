@@ -3,10 +3,14 @@ import React, { Component } from 'react';
 export default class Pin extends Component {
     render() {
         return (
-          <tr>
-            <td>{this.props.pin.title}</td>
-            <td><img alt={this.props.pin.url} src={this.props.pin.image} width="100" height="100"/></td>
-          </tr>
+            <div className='card bg-light'>
+              <img className="card-img-top" alt={this.props.pin.url} src={this.props.pin.image} width="100" height="100"/>
+              <div className="card-body">
+                  <p className='card-text'>
+                    {this.props.pin.title}   
+                  </p>
+              </div>
+            </div>
         );
     }
 }

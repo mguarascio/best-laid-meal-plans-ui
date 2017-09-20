@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import PinResults from './PinResults';
+import Calendar from './Calendar';
 
 
 var PINS = [
@@ -54,8 +55,19 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <PinResults pins={PINS}/>
+        <div className="container">
+            <div className="row">
+                <div className="col-sm-3">
+                    <PinResults pins={PINS}/>
+                </div>
+                <div className="col-sm-9">
+                    <Calendar/>
+                </div>
+            </div>
+        </div>
       </div>
+
+
     );
   }
 }
